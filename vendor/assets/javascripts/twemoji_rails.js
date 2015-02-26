@@ -3,7 +3,7 @@
   twemoji_rails = {
 
     parse: function(unicode) {
-      return twemoji.parse(unicode.replace(/:(.+):/, this.replacer));
+      return twemoji.parse(unicode.replace(/:(\w+):/g, this.replacer));
     },
 
     replacer: function(match, shortname, offset, string) {
