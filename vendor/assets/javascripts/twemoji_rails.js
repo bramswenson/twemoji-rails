@@ -2,8 +2,8 @@
 (function(){
   twemoji_rails = {
 
-    parse: function(unicode) {
-      return twemoji.parse(unicode.replace(/:(\w+):/g, this.replacer));
+    parse: function(unicode, how) {
+      return twemoji.parse(unicode.replace(/:(\w+):/g, this.replacer), how);
     },
 
     replacer: function(match, shortname, offset, string) {
